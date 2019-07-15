@@ -91,7 +91,7 @@ stages:
             inputs:
               action: patch
               resourceToPatch: name
-              name: $(imageRepository) 
+              name: captureorder 
               kind: Deployment
               namespace: $(k8sNamespace)
-              patch: '{"spec": {"template": {"spec":{"containers":[{"name":"$(imageRepository)","env":[{"name":"TEAMNAME","value":"$(teamName)"}]}]}}}}' # replacing TEAMNAME with the value specified in the variables
+              patch: '{"spec": {"template": {"spec":{"containers":[{"name":"captureorder","env":[{"name":"TEAMNAME","value":"$(teamName)"}]}]}}}}' # replacing TEAMNAME with the value specified in the variables
